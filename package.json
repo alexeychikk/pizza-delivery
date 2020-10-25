@@ -1,0 +1,85 @@
+{
+  "name": "pizza-delivery",
+  "version": "1.0.0",
+  "description": "API for a pizza-delivery company",
+  "main": "build/main.js",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alexeychikk/pizza-delivery.git"
+  },
+  "engines": {
+    "node": "~12.14.0",
+    "npm": "~6.13.4"
+  },
+  "scripts": {
+    "start": "cd build && node -r tsconfig-paths/register main.js",
+    "start:dev": "env-cmd -e dev npm start",
+    "prebuild": "npm run clean",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "cp tsconfig.paths.json build/tsconfig.json",
+    "watch": "set DEBUG=* && nodemon",
+    "lint": "npm run lint:tsc && npm run lint:eslint",
+    "lint:tsc": "tsc -p tsconfig.json",
+    "lint:eslint": "eslint -c .eslintrc.js --ext .ts src/",
+    "lint:prettier": "prettier --write \"{src,__tests__}/**/*.ts\"",
+    "commit": "commit-prompt --no-verify",
+    "precommit": "lint-staged && npm run lint:tsc && npm run lint:eslint",
+    "clean": "rimraf 'build'"
+  },
+  "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/debug": "^4.1.5",
+    "@types/lodash": "^4.14.162",
+    "@types/nanoid": "^2.1.0",
+    "@types/node": "^14.14.2",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
+    "class-validator": "^0.12.2",
+    "date-fns": "^2.16.1",
+    "debug": "^4.2.0",
+    "env-cmd": "^10.1.0",
+    "fastify": "^3.7.0",
+    "fastify-cookie": "^4.1.0",
+    "fastify-cors": "^4.1.0",
+    "fastify-session": "^5.2.0",
+    "form-data": "^3.0.0",
+    "lodash": "^4.17.20",
+    "nanoid": "^3.1.15",
+    "nedb-promises": "^4.1.0",
+    "rimraf": "^3.0.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.12.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.7.3",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "trucknet-commit": "^1.5.5",
+    "ts-node": "^9.0.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src",
+      ".env-cmdrc",
+      "package.json"
+    ],
+    "exec": "env-cmd -e dev node --inspect=5858 -r ts-node/register -r tsconfig-paths/register src/main.ts",
+    "ext": "ts"
+  }
+}

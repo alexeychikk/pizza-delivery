@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "sourceMap": true,
+    "strict": true,
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2017"],
+    "typeRoots": ["node_modules/@types", "./@types"],
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
