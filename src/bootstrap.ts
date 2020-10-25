@@ -6,6 +6,11 @@ import fastifySession from "fastify-session";
 
 import { PizzaDeliveryApp } from "./types";
 import { Database } from "./services/Database";
+import { UserDao, UserService } from "./services/UserService";
+import { MenuDao, MenuService } from "./services/MenuService";
+import { createUserRoutes, createMenuRoutes, createCartRoutes } from "./routes";
+import { OrderDao, OrderService } from "./services/OrderService";
+import { MailgunApi, MailingService } from "./services/MailingService";
 
 const debug = createDebug("pizza-delivery-app:api");
 
@@ -51,6 +56,31 @@ export const bootstrap = async ({
   });
 
   const db = new Database({ dbFolder });
+
+  const userDao = new UserDao({ db });
+  const userService = new UserService({ dao: userDao });
+
+  const menuDao = new MenuDao({ db });
+  const menuService = new MenuService({ dao: menuDao });
+
+  const mailgunApi = new MailgunApi({
+    mailgunApiKey,
+    mailgunDomain,
+    mailgunEmail,
+  });
+  const mailingService = new MailingService({ mailingApi: mailgunApi });
+
+  const orderDao = new OrderDao({ db });
+  const orderService = new OrderService({
+    dao: orderDao,
+    menuService,
+    userService,
+    onOrderPlaced: mailingService.sendOrderPlacedEmail,
+  });
+
+  createUserRoutes({ app, userService });
+  await createMenuRoutes({ app, menuService });
+  createCartRoutes({ app, orderService });
 
   app.get("/", async (request, reply) => {
     void reply.send({});
