@@ -1,0 +1,1178 @@
+{
+  "info": {
+    "_postman_id": "b7546aff-69f4-4956-a79e-ad70d183cc38",
+    "name": "pizza-delivery",
+    "description": "RESTful API for a pizza-delivery company",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "POST /users",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Alex\",\r\n    \"lastName\": \"Zin\",\r\n    \"email\": \"alexdarkmm@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"address\": \"Israel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3003/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users"]
+            },
+            "description": "Creates a new user and automatically authenticates him."
+          },
+          "response": [
+            {
+              "name": "POST /users",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"firstName\": \"Alex\",\r\n    \"lastName\": \"Zin\",\r\n    \"email\": \"alexdarkmm@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"address\": \"Israel\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3003/users",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=8LAEhpu7Xj-5FQMFg21S_lWFpIIGsieJ.0cqT%2F3zz0%2FKL8G0gzx0cUE22ewqJpMr5w6nH8r5Qezo; Path=/; Expires=Sat, 14 Nov 2020 19:57:49 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "117"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:57:49 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"alexdarkmm@gmail.com\",\n    \"_id\": \"PU3MCa7nEhAY6bRY5N0Re\",\n    \"firstName\": \"Alex\",\n    \"lastName\": \"Zin\",\n    \"address\": \"Israel\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /users/login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"alexdarkmm@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3003/users/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "login"]
+            },
+            "description": "Authenticates user using `email` and `password`."
+          },
+          "response": [
+            {
+              "name": "POST /users/login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"alexdarkmm@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3003/users/login",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "login"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=8LAEhpu7Xj-5FQMFg21S_lWFpIIGsieJ.0cqT%2F3zz0%2FKL8G0gzx0cUE22ewqJpMr5w6nH8r5Qezo; Path=/; Expires=Sat, 14 Nov 2020 19:58:13 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "117"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:58:13 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"alexdarkmm@gmail.com\",\n    \"_id\": \"PU3MCa7nEhAY6bRY5N0Re\",\n    \"firstName\": \"Alex\",\n    \"lastName\": \"Zin\",\n    \"address\": \"Israel\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /users/logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/users/logout",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "logout"]
+            },
+            "description": "Logouts a user by destroying his session."
+          },
+          "response": [
+            {
+              "name": "POST /users/logout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/users/logout",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "logout"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "2"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:58:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{}"
+            }
+          ]
+        },
+        {
+          "name": "GET /users/me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/users/me",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "me"]
+            },
+            "description": "Returns public user info of a currently authenticated user."
+          },
+          "response": [
+            {
+              "name": "GET /users/me",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/users/me",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "me"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=T1_oP1_YvvxxiLLvWE4ZM0bOgVTYCrq2.2WKSbGbZAbS2k1HnaCziXfghs%2BxAjmthP5FFUBgaEPQ; Path=/; Expires=Sat, 14 Nov 2020 19:58:58 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "117"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:58:58 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"alexdarkmm@gmail.com\",\n    \"_id\": \"PU3MCa7nEhAY6bRY5N0Re\",\n    \"firstName\": \"Alex\",\n    \"lastName\": \"Zin\",\n    \"address\": \"Israel\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET /users/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/users/PU3MCa7nEhAY6bRY5N0Re",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "PU3MCa7nEhAY6bRY5N0Re"]
+            },
+            "description": "Returns public user info of a user by `id` path param."
+          },
+          "response": [
+            {
+              "name": "GET /users/:id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/users/PU3MCa7nEhAY6bRY5N0Re",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "PU3MCa7nEhAY6bRY5N0Re"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=T1_oP1_YvvxxiLLvWE4ZM0bOgVTYCrq2.2WKSbGbZAbS2k1HnaCziXfghs%2BxAjmthP5FFUBgaEPQ; Path=/; Expires=Sat, 14 Nov 2020 19:59:12 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "117"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:59:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"alexdarkmm@gmail.com\",\n    \"_id\": \"PU3MCa7nEhAY6bRY5N0Re\",\n    \"firstName\": \"Alex\",\n    \"lastName\": \"Zin\",\n    \"address\": \"Israel\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT /users/me",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Noa\",\r\n    \"address\": \"Tel Aviv, Israel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3003/users/me",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "me"]
+            },
+            "description": "Updates user info of a currently authenticated user.  \n`password` field cannot be changed."
+          },
+          "response": [
+            {
+              "name": "PUT /users/me",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"firstName\": \"Noa\",\r\n    \"address\": \"Tel Aviv, Israel\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3003/users/me",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "me"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=T1_oP1_YvvxxiLLvWE4ZM0bOgVTYCrq2.2WKSbGbZAbS2k1HnaCziXfghs%2BxAjmthP5FFUBgaEPQ; Path=/; Expires=Sat, 14 Nov 2020 19:59:55 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "126"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:59:55 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"alexdarkmm@gmail.com\",\n    \"_id\": \"PU3MCa7nEhAY6bRY5N0Re\",\n    \"firstName\": \"Noa\",\n    \"lastName\": \"Zin\",\n    \"address\": \"Tel Aviv, Israel\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT /users/:id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Noa\",\r\n    \"address\": \"Tel Aviv, Israel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3003/users/PU3MCa7nEhAY6bRY5N0Re",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "PU3MCa7nEhAY6bRY5N0Re"]
+            },
+            "description": "Updates user info of a user by `id` path param.  \n`password` field cannot be changed."
+          },
+          "response": [
+            {
+              "name": "PUT /users/:id",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"firstName\": \"Noa\",\r\n    \"address\": \"Tel Aviv, Israel\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3003/users/PU3MCa7nEhAY6bRY5N0Re",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "PU3MCa7nEhAY6bRY5N0Re"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=T1_oP1_YvvxxiLLvWE4ZM0bOgVTYCrq2.2WKSbGbZAbS2k1HnaCziXfghs%2BxAjmthP5FFUBgaEPQ; Path=/; Expires=Sat, 14 Nov 2020 20:00:29 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "126"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:00:29 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"alexdarkmm@gmail.com\",\n    \"_id\": \"PU3MCa7nEhAY6bRY5N0Re\",\n    \"firstName\": \"Noa\",\n    \"lastName\": \"Zin\",\n    \"address\": \"Tel Aviv, Israel\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE /users/me",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/users/me",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "me"]
+            },
+            "description": "Deletes currently authenticated user and logouts him."
+          },
+          "response": [
+            {
+              "name": "DELETE /users/me",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/users/me",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "me"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "2"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 19:57:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE /users/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/users/PU3MCa7nEhAY6bRY5N0Re",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["users", "PU3MCa7nEhAY6bRY5N0Re"]
+            },
+            "description": "Deletes a user by `id` path param and logouts him."
+          },
+          "response": [
+            {
+              "name": "DELETE /users/:id",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/users/PU3MCa7nEhAY6bRY5N0Re",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["users", "PU3MCa7nEhAY6bRY5N0Re"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "2"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:00:49 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{}"
+            }
+          ]
+        }
+      ],
+      "description": "CRUD for users.",
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "menu",
+      "item": [
+        {
+          "name": "GET /menu",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["menu"]
+            },
+            "description": "Returns all available menu items."
+          },
+          "response": [
+            {
+              "name": "GET /menu",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/menu",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["menu"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=TKV2oazxzooItS7KB-XE3oDKQNId84wj.Dfbu3P7WaGQ3iQ60nkD67YS0aFs%2Beo%2B6sXLgpOtPhBc; Path=/; Expires=Sat, 14 Nov 2020 20:01:24 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "250"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:01:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"1\",\n        \"name\": \"Pizza Pepperoni\",\n        \"costInUSD\": 5\n    },\n    {\n        \"_id\": \"2\",\n        \"name\": \"Pizza Margarita\",\n        \"costInUSD\": 4\n    },\n    {\n        \"_id\": \"3\",\n        \"name\": \"Pizza Texas\",\n        \"costInUSD\": 5.5\n    },\n    {\n        \"_id\": \"4\",\n        \"name\": \"Pizza Hawaiian\",\n        \"costInUSD\": 6.99\n    },\n    {\n        \"_id\": \"5\",\n        \"name\": \"Coca Cola\",\n        \"costInUSD\": 1\n    }\n]"
+            }
+          ]
+        }
+      ],
+      "description": "API for the menu.",
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "cart",
+      "item": [
+        {
+          "name": "POST /cart",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\": [\r\n    {\"itemId\": \"1\", \"amount\": 2},\r\n    {\"itemId\": \"2\", \"amount\": 4}\r\n]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3003/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["cart"]
+            },
+            "description": "Creates or updates a shopping cart of a current user.  \n* `items[n].itemId` must be unique in the `items` array.  \n* `amount` must be positive integer, max `100`."
+          },
+          "response": [
+            {
+              "name": "POST /cart",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"items\": [\r\n    {\"itemId\": \"1\", \"amount\": 2},\r\n    {\"itemId\": \"2\", \"amount\": 4}\r\n]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3003/cart",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["cart"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=TKV2oazxzooItS7KB-XE3oDKQNId84wj.Dfbu3P7WaGQ3iQ60nkD67YS0aFs%2Beo%2B6sXLgpOtPhBc; Path=/; Expires=Sat, 14 Nov 2020 20:01:36 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "121"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:01:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"userId\": \"UOD8cFaCm-OQ9smXgIqRf\",\n    \"items\": [\n        {\n            \"itemId\": \"1\",\n            \"amount\": 2\n        },\n        {\n            \"itemId\": \"2\",\n            \"amount\": 4\n        }\n    ],\n    \"_id\": \"7vqwAwFJN7DLlPQr\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT /cart",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\": [\r\n    {\"itemId\": \"1\", \"amount\": 2},\r\n    {\"itemId\": \"2\", \"amount\": 4}\r\n]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3003/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["cart"]
+            },
+            "description": "Creates or updates a shopping cart of a current user.  \n* `items[n].itemId` must be unique in the `items` array.  \n* `amount` must be positive integer, max `100`."
+          },
+          "response": [
+            {
+              "name": "PUT /cart",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"items\": [\r\n    {\"itemId\": \"1\", \"amount\": 2},\r\n    {\"itemId\": \"2\", \"amount\": 4}\r\n]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3003/cart",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["cart"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=TKV2oazxzooItS7KB-XE3oDKQNId84wj.Dfbu3P7WaGQ3iQ60nkD67YS0aFs%2Beo%2B6sXLgpOtPhBc; Path=/; Expires=Sat, 14 Nov 2020 20:01:43 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "121"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:01:43 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"userId\": \"UOD8cFaCm-OQ9smXgIqRf\",\n    \"items\": [\n        {\n            \"itemId\": \"1\",\n            \"amount\": 2\n        },\n        {\n            \"itemId\": \"2\",\n            \"amount\": 4\n        }\n    ],\n    \"_id\": \"7vqwAwFJN7DLlPQr\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET /cart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["cart"]
+            },
+            "description": "Returns the shopping cart of a current user."
+          },
+          "response": [
+            {
+              "name": "GET /cart",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/cart",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["cart"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=TKV2oazxzooItS7KB-XE3oDKQNId84wj.Dfbu3P7WaGQ3iQ60nkD67YS0aFs%2Beo%2B6sXLgpOtPhBc; Path=/; Expires=Sat, 14 Nov 2020 20:01:52 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "121"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:01:52 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"userId\": \"UOD8cFaCm-OQ9smXgIqRf\",\n    \"items\": [\n        {\n            \"itemId\": \"1\",\n            \"amount\": 2\n        },\n        {\n            \"itemId\": \"2\",\n            \"amount\": 4\n        }\n    ],\n    \"_id\": \"7vqwAwFJN7DLlPQr\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE /cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["cart"]
+            },
+            "description": "Empties the shopping cart of a current user."
+          },
+          "response": [
+            {
+              "name": "DELETE /cart",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/cart",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["cart"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=TKV2oazxzooItS7KB-XE3oDKQNId84wj.Dfbu3P7WaGQ3iQ60nkD67YS0aFs%2Beo%2B6sXLgpOtPhBc; Path=/; Expires=Sat, 14 Nov 2020 20:02:00 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "70"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:02:00 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"userId\": \"UOD8cFaCm-OQ9smXgIqRf\",\n    \"items\": [],\n    \"_id\": \"7vqwAwFJN7DLlPQr\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /cart/checkout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3003/cart/checkout",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3003",
+              "path": ["cart", "checkout"]
+            },
+            "description": "Places an order based on the current shopping cart state.  \nIf shopping cart is empty - `400` error will be thrown.  \nIf the order is successfully placed - user will receive the receipt by email."
+          },
+          "response": [
+            {
+              "name": "POST /cart/checkout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3003/cart/checkout",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3003",
+                  "path": ["cart", "checkout"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "false"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "set-cookie",
+                  "value": "sessionToken=TKV2oazxzooItS7KB-XE3oDKQNId84wj.Dfbu3P7WaGQ3iQ60nkD67YS0aFs%2Beo%2B6sXLgpOtPhBc; Path=/; Expires=Sat, 14 Nov 2020 20:02:12 GMT; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "content-length",
+                  "value": "287"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 25 Oct 2020 20:02:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"RfIRR9fUWhabbd5Xx9gkN\",\n    \"userId\": \"UOD8cFaCm-OQ9smXgIqRf\",\n    \"items\": [\n        {\n            \"itemId\": \"1\",\n            \"amount\": 2,\n            \"name\": \"Pizza Pepperoni\",\n            \"itemCostInUSD\": 5\n        },\n        {\n            \"itemId\": \"2\",\n            \"amount\": 4,\n            \"name\": \"Pizza Margarita\",\n            \"itemCostInUSD\": 4\n        }\n    ],\n    \"address\": \"Israel\",\n    \"costInUSD\": 26,\n    \"dateCreated\": \"2020-10-25T20:02:12.016Z\"\n}"
+            }
+          ]
+        }
+      ],
+      "description": "CRUD for the shopping cart and order placement.",
+      "protocolProfileBehavior": {}
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
