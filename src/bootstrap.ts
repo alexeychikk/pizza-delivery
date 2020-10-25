@@ -5,6 +5,7 @@ import fastifyCookie from "fastify-cookie";
 import fastifySession from "fastify-session";
 
 import { PizzaDeliveryApp } from "./types";
+import { Database } from "./services/Database";
 
 const debug = createDebug("pizza-delivery-app:api");
 
@@ -19,6 +20,7 @@ export type ServerOptions = {
 
 export type BootstrapResult = {
   app: PizzaDeliveryApp;
+  db: Database;
 };
 
 export const bootstrap = async ({
@@ -48,6 +50,8 @@ export const bootstrap = async ({
     },
   });
 
+  const db = new Database({ dbFolder });
+
   app.get("/", async (request, reply) => {
     void reply.send({});
   });
@@ -72,5 +76,5 @@ export const bootstrap = async ({
     return reply.send(error);
   });
 
-  return { app };
+  return { app, db };
 };
